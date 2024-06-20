@@ -1,0 +1,21 @@
+---
+import data from "@/data/config";
+const { siteInfo } = data;
+---
+
+<a href="/" class="Brand">
+	{siteInfo.name}
+</a>
+
+<style lang="scss">
+	.Brand {
+		font-weight: 700;
+		font-size: 2rem;
+		color: var(--ui-white);
+		text-decoration: none;
+
+		@media screen and (max-width: 480px) {
+			font-size: 1.4rem;
+		}
+	}
+</style>

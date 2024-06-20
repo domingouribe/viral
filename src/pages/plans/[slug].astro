@@ -1,0 +1,46 @@
+---
+import config from "@/data/config";
+import PagesLayout from "@/layouts/PagesLayout.astro";
+export async function getStaticPaths() {
+	return config.plans.map((plan) => ({
+		params: { slug: plan.slug },
+	}));
+}
+
+const { slug } = Astro.params;
+const plan = config.plans.find((plan) => plan.slug === slug);
+
+if (!plan) {
+	throw new Error(`Plan with slug ${slug} not found`);
+}
+---
+
+<PagesLayout title="un titulo" description="Una descripcion aqui">
+	<div class="Container">
+		<div class="PlanDetail">
+			<h1 class="PlanDetail-title">{plan.name}</h1>
+			<div class="PlanDetail-description">
+				<p>{plan.content}</p>
+			</div>
+
+			<div class="PlanDetail-picture">
+				<img src={plan.featureImage} alt={"alt"} />
+			</div>
+
+			<ul class="PlanDetail-features">
+				{plan.features.map((item) => <li>{item}</li>)}
+			</ul>
+		</div>
+	</div>
+</PagesLayout>
+<style lang="scss">
+	.PlanDetail {
+		max-width: 500px;
+
+		&-picture img {
+			width: 100%;
+			height: auto;
+			margin: auto;
+		}
+	}
+</style>

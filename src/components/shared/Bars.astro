@@ -1,0 +1,43 @@
+<button class="Bars" aria-label="Navigation menu">
+	<span class="Bars-line"></span>
+	<span class="Bars-line"></span>
+	<span class="Bars-line"></span>
+</button>
+<style lang="scss">
+	.Bars {
+		display: none;
+		width: 40px;
+		border: none;
+		background: none;
+		flex-flow: column;
+		cursor: pointer;
+		z-index: 10;
+
+		@media screen and (max-width: 768px) {
+			display: block;
+		}
+
+		&-line {
+			height: 3px;
+			width: 100%;
+			background-color: var(--ui-white);
+			display: block;
+			margin-top: 5px;
+			transition: all 0.2s ease;
+		}
+	}
+
+	.TransformBars {
+		span:nth-child(1) {
+			transform: translateY(8px) rotate(45deg);
+		}
+
+		span:nth-child(2) {
+			opacity: 0;
+		}
+
+		span:nth-child(3) {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+	}
+</style>

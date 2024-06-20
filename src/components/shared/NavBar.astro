@@ -1,0 +1,66 @@
+---
+import config from "@/data/config";
+const { menu } = config;
+---
+
+<div class="HeaderNav">
+	{
+		menu.map((item) => (
+			<a href={item.url} class="HeaderNav-link">
+				{item.title}
+			</a>
+		))
+	}
+</div>
+
+<style lang="scss">
+	.HeaderNav {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 1em;
+		align-items: center;
+		position: relative;
+
+		&-link {
+			border-radius: 1em;
+			padding: 0.4em 0.5em;
+			text-decoration: none;
+			color: var(--ui-green);
+			text-transform: uppercase;
+			font-weight: 700;
+
+			&:hover {
+				background-color: var(--ui-green);
+				color: var(--ui-black);
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			position: absolute;
+			background-color: var(--ui-black);
+			width: 100vw;
+			left: 0;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			transition: all 0.3s ease;
+			overflow: hidden;
+			pointer-events: none;
+			box-shadow: 1px 3px 3px #rgba(31, 31, 31, 0.349);
+			box-sizing: border-box;
+			height: 0;
+			top: 70px;
+
+			&.isActive {
+				height: 100vh;
+				pointer-events: unset;
+				top: 0;
+			}
+
+			&-link {
+				font-size: 2rem;
+			}
+		}
+	}
+</style>

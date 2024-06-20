@@ -1,0 +1,46 @@
+---
+import PagesLayout from "@/layouts/PagesLayout.astro";
+import PlanCard from "@/components/shared/PlanCard.astro";
+import CardsContainer from "@/components/shared/CardsContainer.astro";
+import SectionHeading from "@/components/shared/SectionHeading.astro";
+import config from "@/data/config";
+const classes = [
+	"Yellow",
+	"Green",
+	"DarkGreen",
+	"Purple",
+	"LightBlue",
+	"Orange",
+	"LightOrange",
+];
+---
+
+<PagesLayout title="Planes" description="Nuestros planes a tu servicio">
+	<SectionHeading
+		title="Estos son todos nuestros planes"
+		description="Tenemos un Plan adecuado para cada tipo de negocio. Elige el más adecuado o contáctanos para asesorarte"
+	/>
+
+	<div class="Container">
+		<CardsContainer>
+			{
+				config.plans.map((plan, index) => (
+					<PlanCard
+						price={plan.price}
+						title={plan.name}
+						description={plan.description}
+						classes={classes[index % classes.length]}
+						tag={plan.tag}
+						features={plan.features}>
+						{/* <a href={`/plans/${plan.slug}`} class="Button Button-sm Orange">
+							Lo quiero!
+						</a> */}
+						<a href="/contact" class="Button Button-sm Orange">
+							Lo quiero!
+						</a>
+					</PlanCard>
+				))
+			}
+		</CardsContainer>
+	</div>
+</PagesLayout>

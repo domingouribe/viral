@@ -1,0 +1,25 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+}
+const { title, description } = Astro.props;
+---
+
+<section class="SectionHeading">
+	<div class="Container">
+		<h2 class="shadow-titles">{title}</h2>
+		{description && <p>{description}</p>}
+		<slot />
+	</div>
+</section>
+
+<style lang="scss">
+	.SectionHeading {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		padding: 2em 0 1em;
+		gap: 0.8em;
+	}
+</style>

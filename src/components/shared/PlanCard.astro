@@ -1,0 +1,96 @@
+---
+export interface Props {
+	title: string;
+	description?: string;
+	price: number;
+	category?: string;
+	classes: string;
+	tag?: string;
+	features?: string[];
+}
+
+const { title, price, classes, tag, features = [] } = Astro.props;
+
+// Formatea el precio según la localización de Chile
+const formattedPrice = price.toLocaleString("es-CL");
+
+// console.log(features);
+---
+
+<article class:list={["PlanCard", classes]}>
+	<header class="PlanCard-header">
+		<h3 class="PlanCard-title">{title}</h3>
+		{tag && <span class="Tag">{tag}</span>}
+	</header>
+	<section class="PlanCard-section">
+		<p class="PlanCard-price"><span>$</span>{formattedPrice}</p>
+		{
+			features.length > 0 && (
+				<ul class="PlanCard-features alternating-colors">
+					{features.map((feature) => (
+						<li>> {feature}</li>
+					))}
+				</ul>
+			)
+		}
+	</section>
+	<footer class="PlanCard-footer">
+		<slot />
+	</footer>
+</article>
+
+<style lang="scss">
+	.PlanCard {
+		border-radius: 0.5em;
+		border: solid 1px var(--ui-black);
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-between;
+		gap: 1em;
+		color: var(--ui-black);
+
+		&-header {
+			border-bottom: solid 1px var(--ui-black);
+			padding: var(--padding-sm);
+			display: flex;
+			justify-content: space-between;
+		}
+		&-title {
+			font-size: 1.3rem;
+			font-weight: 400;
+		}
+		&-price {
+			font-size: 2.2rem;
+			font-weight: 400;
+			display: flex;
+			align-items: center;
+			gap: 3px;
+			span {
+				font-size: 0.8rem;
+				font-weight: normal;
+			}
+		}
+		&-features {
+			display: flex;
+			flex-flow: column nowrap;
+			padding: 0;
+			list-style: none;
+			font-size: 0.8rem;
+			gap: 0.7em;
+
+			li {
+				// border-bottom: 1px solid var(--ui-dark-background);
+				padding-left: 0.5em;
+			}
+		}
+
+		&-section {
+			padding: 1em;
+			border-bottom: solid 1px var(--ui-black);
+		}
+
+		&-footer {
+			padding: 1em;
+		}
+	}
+</style>

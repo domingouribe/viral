@@ -1,0 +1,93 @@
+---
+import Image from "astro/components/Image.astro";
+import HSBT from "@/assets/carousel/hsbt.png";
+import RUTA from "@/assets/carousel/larutadelaquena.png";
+import HIDRO from "@/assets/carousel/hidroruz.png";
+import SPMED from "@/assets/carousel/spmed.png";
+import CLINICA from "@/assets/carousel/clinicalasmercedes.png";
+---
+
+<div class="Carousel">
+	<div class="Carousel-item">
+		<Image
+			width={350}
+			height={200}
+			src={RUTA}
+			alt="Miniatura Página Web La Ruta de la Quena"
+		/>
+		<p>
+			Visitar <a target="_blank" href="https://larutadelaquena.com"
+				>La Ruta de La Quena</a
+			>
+		</p>
+	</div>
+	<div class="Carousel-item">
+		<Image
+			width={350}
+			height={200}
+			src={HSBT}
+			alt="Miniatura Página Web HSBT"
+		/>
+		<p>
+			Visitar <a target="_blank" href="https://hsbt.cl">HSBT</a>
+		</p>
+	</div>
+	<div class="Carousel-item">
+		<Image
+			width={350}
+			height={200}
+			src={CLINICA}
+			alt="Miniatura Página Web Clínica Las Mercedes"
+		/>
+		<p>
+			Visitar <a target="_blank" href="https://clinicalasmercedes.cl"
+				>Clínica Las Mercedes</a
+			>
+		</p>
+	</div>
+	<div class="Carousel-item">
+		<Image
+			width={350}
+			height={200}
+			src={SPMED}
+			alt="Miniatura Página Web SPMED Médicos Clínica Las Condes"
+		/>
+		<p>
+			Visitar <a target="_blank" href="https://spmed.cl">SPMED </a>
+		</p>
+	</div>
+	<div class="Carousel-item">
+		<Image
+			width={350}
+			height={200}
+			src={HIDRO}
+			alt="Miniatura Página Web Hidroruz Insumos para la gasfitería en Coquimbo"
+		/>
+		<p>
+			Visitar <a target="_blank" href="https://hidroruz.cl">HIDRORUZ</a>
+		</p>
+	</div>
+</div>
+
+<style lang="scss">
+	.Carousel {
+		--auto-grid-min: 12rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min), 1fr));
+		gap: 1em;
+		align-items: baseline;
+
+		&-item {
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+			font-size: 0.9rem;
+			gap: 1em;
+
+			img:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+</style>

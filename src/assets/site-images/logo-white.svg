@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="642.63971"
+   height="100.24725"
+   viewBox="0 0 170.03175 26.523752"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="logo-white.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#9f9f9f"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="0.91264202"
+     inkscape:cx="370.90118"
+     inkscape:cy="435.54865"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-16.077868,-180.75571)">
+    <g
+       id="g2"
+       transform="matrix(1.6848776,0,0,1.6848776,-39.360517,-158.34365)"
+       inkscape:export-filename="..\..\..\public\favicon.png"
+       inkscape:export-xdpi="72"
+       inkscape:export-ydpi="72">
+      <rect
+         style="fill:#189e5f;fill-opacity:1;stroke-width:4.11901"
+         id="rect2"
+         width="94.22049"
+         height="94.22049"
+         x="60.433979"
+         y="231.19991"
+         ry="13.045915" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:49.0337px;line-height:1.5;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';letter-spacing:0.17362px;word-spacing:3.16267px;fill:#ffffff;stroke:none;stroke-width:4.90349;stroke-dasharray:none"
+         x="67.91729"
+         y="298.28815"
+         id="text2"><tspan
+           sodipodi:role="line"
+           id="tspan2"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Montserrat;-inkscape-font-specification:'Montserrat Bold';letter-spacing:0.17362px;fill:#ffffff;stroke:none;stroke-width:4.90349;stroke-dasharray:none"
+           x="67.91729"
+           y="298.28815">&lt;/&gt;</tspan></text>
+    </g>
+  </g>
+</svg>
