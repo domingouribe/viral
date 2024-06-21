@@ -19,7 +19,7 @@
   --padding-md: 1em;
   --padding-l: 1.5em;
   --padding-xl: 2em;
-  --shadow-titles: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  --shadow-titles: 3px 3px 3px rgba(0, 0, 0, 0.2);
   color-scheme: dark light;
 }
 
@@ -45,7 +45,6 @@
   body {
     background-color: var(--ui-dark-background);
     color: var(--ui-white);
-    // color: orange !important;
   }
 }
 
