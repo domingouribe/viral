@@ -10,7 +10,7 @@ import CLINICA from "@/assets/carousel/clinicalasmercedes.png";
 <div class="Carousel">
 	<div class="Carousel-item">
 		<Image
-			width={350}
+			width={300}
 			height={200}
 			src={RUTA}
 			alt="Miniatura Página Web La Ruta de la Quena"
@@ -23,7 +23,7 @@ import CLINICA from "@/assets/carousel/clinicalasmercedes.png";
 	</div>
 	<div class="Carousel-item">
 		<Image
-			width={350}
+			width={300}
 			height={200}
 			src={HSBT}
 			alt="Miniatura Página Web HSBT"
@@ -34,7 +34,7 @@ import CLINICA from "@/assets/carousel/clinicalasmercedes.png";
 	</div>
 	<div class="Carousel-item">
 		<Image
-			width={350}
+			width={300}
 			height={200}
 			src={CLINICA}
 			alt="Miniatura Página Web Clínica Las Mercedes"
@@ -47,7 +47,7 @@ import CLINICA from "@/assets/carousel/clinicalasmercedes.png";
 	</div>
 	<div class="Carousel-item">
 		<Image
-			width={350}
+			width={300}
 			height={200}
 			src={SPMED}
 			alt="Miniatura Página Web SPMED Médicos Clínica Las Condes"
@@ -58,10 +58,11 @@ import CLINICA from "@/assets/carousel/clinicalasmercedes.png";
 	</div>
 	<div class="Carousel-item">
 		<Image
-			width={350}
+			width={300}
 			height={200}
 			src={HIDRO}
 			alt="Miniatura Página Web Hidroruz Insumos para la gasfitería en Coquimbo"
+			class="Carousel-pict"
 		/>
 		<p>
 			Visitar <a target="_blank" href="https://hidroruz.cl">HIDRORUZ</a>
@@ -85,8 +86,12 @@ import CLINICA from "@/assets/carousel/clinicalasmercedes.png";
 			font-size: 0.9rem;
 			gap: 1em;
 
+			.CarouselPict {
+				width: 100%;
+			}
+
 			img:hover {
-				transform: scale(1.2);
+				transform: scale(1.05);
 			}
 		}
 	}
