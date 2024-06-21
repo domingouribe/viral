@@ -168,6 +168,8 @@ img {
 
 .PageImage {
   margin: 0 0 1.5em;
+  aspect-ratio: 5/2;
+  object-fit: cover;
 }
 
 .Button-sm {
