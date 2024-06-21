@@ -6,7 +6,7 @@ import "@/styles/global.scss";
 interface Props {
 	title: string;
 	description: string;
-	image?: string;
+	image: string;
 	canonicalURL?: string;
 }
 
@@ -35,7 +35,6 @@ const { title, description, canonicalURL = "", image } = Astro.props;
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={image} />
-
 
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
