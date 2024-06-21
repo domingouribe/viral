@@ -10,9 +10,9 @@
   --ui-light-orange: #ff9f68;
   --ui-typography: "Montserrat Variable", sans-serif;
   --ui-yellow: #fff780;
-  --ui-green: #c4fdffº;
   --ui-green: #7adc8f;
   --ui-light-purple: #a688ff;
+  --ui-dark-purple: #6145b6;
   --ui-blue: #1b3be5;
   --ui-light-blue: #7b90fc;
   --padding-sm: .5em;
@@ -27,13 +27,25 @@
   body {
     background-color: var(--ui-light-background);
     color: var(--ui-black);
+    // color: red !important;
   }
+
+  a {
+    color: var(--ui-dark-purple);
+    font-weight: 500;
+  }
+
+  a:hover {
+    color: var(--ui-accent);
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--ui-dark-background);
     color: var(--ui-white);
+    // color: orange !important;
   }
 }
 
@@ -55,8 +67,6 @@ body {
   overflow-wrap: break-word;
   font-size: 17px;
   line-height: 1.6;
-  background-color: var(--ui-dark-background);
-  color: var(--ui-light-text-color);
   font-family: var(--ui-typography);
   display: flex;
   flex-flow: column nowrap;
@@ -88,14 +98,6 @@ main {
 strong,
 b {
   font-weight: 700;
-}
-
-a {
-  color: var(--ui-accent);
-}
-
-a:hover {
-  color: var(--ui-accent);
 }
 
 img {
@@ -201,5 +203,13 @@ h3 {
 
   .Container {
     padding: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.3;
   }
 }

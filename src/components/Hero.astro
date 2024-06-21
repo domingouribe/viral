@@ -4,7 +4,7 @@ import Button from "./shared/Button.astro";
 
 <section class="Hero">
 	<div class="Container">
-		<h1 class="Hero-title">
+		<h1 class="Hero-title shadow-titles">
 			Páginas Web Económicas para PYMEs y emprendimientos
 		</h1>
 		<p class="Hero-description">
@@ -30,7 +30,7 @@ import Button from "./shared/Button.astro";
 <style lang="scss">
 	.Hero {
 		background-image: linear-gradient(
-				rgba(4, 5, 48, 0.596),
+				rgba(6, 8, 85, 0.726),
 				rgba(0, 0, 0, 0.719)
 			),
 			url(/src/assets/site-images/FaroLaSerena-mobile.webp);
@@ -46,6 +46,7 @@ import Button from "./shared/Button.astro";
 		justify-content: center;
 		gap: 1em;
 		padding: 1em 0;
+		color: var(--ui-white);
 
 		&-actions {
 			display: flex;
@@ -74,15 +75,12 @@ import Button from "./shared/Button.astro";
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-attachment: local;
-			height: 60vh;
+			height: unset;
 
 			&-title {
 				font-size: 2rem;
 				line-height: 1.3;
 			}
-		}
-
-		@media screen and (max-width: 480px) {
 		}
 	}
 </style>
