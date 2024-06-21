@@ -2,15 +2,16 @@
 
 :root {
   --ui-accent: #ff8640;
+  --ui-dark-green: #189e5f;
   --ui-dark-background: #535353;
+  --ui-light-background: #e4e4e4;
+  --ui-black: #1d1d1d;
+  --ui-white: #f3f3f3;
   --ui-light-orange: #ff9f68;
   --ui-typography: "Montserrat Variable", sans-serif;
   --ui-yellow: #fff780;
   --ui-green: #c4fdffº;
   --ui-green: #7adc8f;
-  --ui-dark-green: #189e5f;
-  --ui-white: #f3f3f3;
-  --ui-black: #1d1d1d;
   --ui-light-purple: #a688ff;
   --ui-blue: #1b3be5;
   --ui-light-blue: #7b90fc;
@@ -18,13 +19,27 @@
   --padding-md: 1em;
   --padding-l: 1.5em;
   --padding-xl: 2em;
-  --shadow-titles: 4px 4px 0 rgba(0, 0, 0, 0.3);
+  --shadow-titles: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  color-scheme: dark light;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--ui-light-background);
+    color: var(--ui-black);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--ui-dark-background);
+    color: var(--ui-white);
+  }
 }
 
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color-scheme: dark light;
 }
 
 *,
@@ -151,25 +166,30 @@ img {
   }
 }
 
+.PageImage {
+  margin: 0 0 1.5em;
+}
+
 .Button-sm {
-  padding: 0.5em 1em;
-  font-size: 0.6rem;
+  padding: 0.9em 1em;
+  font-size: 0.7rem;
+  font-weight: 700;
 }
 
 .Button-md {
-  padding: 0.5em 1em;
-  font-size: 0.8rem;
+  padding: 1.1em 1.2em;
+  font-size: 0.9rem;
 }
 
 .Button-l {
-  padding: 0.5em 2.5em;
-  font-size: 1rem;
+  padding: 1.3em 2em;
+  font-size: 1.1rem;
 }
 
 h1,
 h2,
 h3 {
-  margin: .5rem 0 2rem;
+  margin: 2.5rem 0 .5rem;
 }
 
 @media (max-width: 768px) {
