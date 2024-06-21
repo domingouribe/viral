@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 
 const siteInfo = {
-  name: "<Viralpyme/>",
+  name: "<Perasconharina/>",
   description: "Páginas internas económicas para PYMES",
   logoUrl: "/assets/logo.png",
   contact: {

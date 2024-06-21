@@ -6,7 +6,7 @@ const today = new Date();
 
 <footer class="Footer">
 	<div class="Container">
-		<p>{siteInfo.name} {today.getFullYear()}</p>
+		<p>{siteInfo.name} - {today.getFullYear()}.</p>
 	</div>
 </footer>
 
@@ -16,5 +16,7 @@ const today = new Date();
 <style lang="scss">
 	.Footer {
 		background-color: var(--ui-black);
+		display: flex;
+		justify-content: center;
 	}
 </style>
