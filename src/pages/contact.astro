@@ -1,12 +1,31 @@
 ---
 import PagesLayout from "@/layouts/PagesLayout.astro";
 import WhatsAppLg from "@/components/social-icons/WhatsAppLg.astro";
+
+const seoData = {
+	title: "Contáctanos - Peras con Harina",
+	description:
+		"Contáctanos y contrata tu plan, o escríbenos y solicita una asesoría más personalizada para orientarte en todo lo que necesites saber antes de contratar.",
+	keywords: [
+		"Páginas web económicas",
+		"Páginas web para PYMES",
+		"Páginas Web de alta calidad",
+	],
+	canonicalUrl: "https://www.perasconharina.com/contact",
+	ogType: "website",
+	ogTitle: "Contáctanos - Peras con Harina",
+	ogDescription:
+		"Contáctanos y contrata tu plan, o escríbenos y solicita una asesoría más personalizada para orientarte en todo lo que necesites saber antes de contratar.",
+	ogImage: "/screenshot.png",
+	twitterCard: "summary_large_image",
+	twitterTitle: "Contáctanos - Peras con Harina",
+	twitterDescription:
+		"Contáctanos y contrata tu plan, o escríbenos y solicita una asesoría más personalizada para orientarte en todo lo que necesites saber antes de contratar.",
+	twitterImage: "/screenshot.png",
+};
 ---
 
-<PagesLayout
-	image="/screenshot.png"
-	title="Contáctanos"
-	description="Perasconharina - Páginas Web Económicas. Contáctanos y consulta sobre nuestra asesoría gratuita para seleccionar el mejor plan para ti">
+<PagesLayout seo={seoData}>
 	<div class="Container">
 		<h1>Contacto</h1>
 		<p>

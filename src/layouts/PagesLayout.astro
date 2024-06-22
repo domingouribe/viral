@@ -21,13 +21,13 @@ interface LayoutProps {
 	};
 }
 
-const { seo }: LayoutProps = Astro.props;
+const props = Astro.props as LayoutProps;
 ---
 
 <!doctype html>
 <html lang="es-CL">
 	<head>
-		<SEO {...seo} />
+		<SEO {...props.seo} />
 	</head>
 	<body>
 		<Header />

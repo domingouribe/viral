@@ -4,76 +4,92 @@ import data from "@/data/config";
 import SectionHeading from "@/components/shared/SectionHeading.astro";
 import Image from "astro/components/Image.astro";
 import ABOUT from "@/assets/site-images/about.webp";
+const seoData = {
+	title: "Nosotros - Peras con Harina",
+	description:
+		"Somos una agencia familiar especializados en marketing digital y desarrollo Web y ofrecemos servicios de alta calidad para tu negocio.",
+	keywords: [
+		"Páginas web económicas",
+		"Páginas web para PYMES",
+		"Páginas Web de alta calidad",
+	],
+	canonicalUrl: "https://www.perasconharina.com/about",
+	ogType: "website",
+	ogTitle: "Nosotros - Peras con Harina",
+	ogDescription:
+		"Somos una agencia familiar especializados en marketing digital y desarrollo Web y ofrecemos servicios de alta calidad para tu negocio.",
+	ogImage: "/src/assets/site-images/about.jpg",
+	twitterCard: "summary_large_image",
+	twitterTitle: "Nosotros - Peras con Harina",
+	twitterDescription:
+		"Somos una agencia familiar especializados en marketing digital y desarrollo Web y ofrecemos servicios de alta calidad para tu negocio.",
+	twitterImage: "/src/assets/site-images/about.jpg",
+};
 ---
 
-<PagesLayout
-	image="/src/assets/site-images/about.jpg"
-	title="Quiénes somos"
-	description="Somos un equipo de profesionales con experiencia con grandes empresas al servicio de las PYMES">
-	<SectionHeading title="Acerca de nosotros" />
+<PagesLayout seo={seoData} />
 
-	<div class="Container">
-		<Image
-			src={ABOUT}
-			alt={"Equipo trabajando en un diseño sobre una mesa"}
-			width={1024}
-			height={768}
-			class="PageImage"
-		/>
-		En {data.siteInfo.name}, somos una agencia comprometida con el crecimiento y
-		éxito de las pequeñas y medianas empresas, profesionales independientes,
-		emprendedores y comercios locales. Aunque contamos con una vasta experiencia
-		en la atención a grandes empresas, nuestra verdadera pasión radica en apoyar
-		a aquellos que impulsan la economía local y necesitan una mano amiga para
-		alcanzar sus objetivos.
+<div class="Container">
+	<Image
+		src={ABOUT}
+		alt={"Equipo trabajando en un diseño sobre una mesa"}
+		width={1024}
+		height={768}
+		class="PageImage"
+	/>
+	En {data.siteInfo.name}, somos una agencia comprometida con el crecimiento y
+	éxito de las pequeñas y medianas empresas, profesionales independientes,
+	emprendedores y comercios locales. Aunque contamos con una vasta experiencia
+	en la atención a grandes empresas, nuestra verdadera pasión radica en apoyar a
+	aquellos que impulsan la economía local y necesitan una mano amiga para
+	alcanzar sus objetivos.
 
-		<h2>Nuestra Misión</h2>
+	<h2>Nuestra Misión</h2>
 
-		Nuestra misión es brindar servicios de diseño, programación y marketing
-		digital con los más altos estándares de calidad, adaptados a las necesidades
-		específicas de cada cliente. Creemos firmemente que las PYMES y los
-		emprendedores merecen el mismo nivel de excelencia y atención que las
-		grandes corporaciones, y estamos aquí para hacerlo posible.
+	Nuestra misión es brindar servicios de diseño, programación y marketing
+	digital con los más altos estándares de calidad, adaptados a las necesidades
+	específicas de cada cliente. Creemos firmemente que las PYMES y los
+	emprendedores merecen el mismo nivel de excelencia y atención que las grandes
+	corporaciones, y estamos aquí para hacerlo posible.
 
-		<h2>Lo que Nos Hace Únicos</h2>
+	<h2>Lo que Nos Hace Únicos</h2>
 
-		<ul>
-			<li>
-				Experiencia y Profesionalismo: Con una trayectoria que abarca diversas
-				industrias y tipos de negocios, entendemos lo que se necesita para
-				destacar en un mercado competitivo.
-			</li>
-			<li>
-				Atención Personalizada: Nos enorgullecemos de ofrecer un servicio
-				cercano y personalizado, adaptándonos a las particularidades de cada
-				proyecto y cliente.
-			</li>
+	<ul>
+		<li>
+			Experiencia y Profesionalismo: Con una trayectoria que abarca diversas
+			industrias y tipos de negocios, entendemos lo que se necesita para
+			destacar en un mercado competitivo.
+		</li>
+		<li>
+			Atención Personalizada: Nos enorgullecemos de ofrecer un servicio cercano
+			y personalizado, adaptándonos a las particularidades de cada proyecto y
+			cliente.
+		</li>
 
-			<li>
-				Compromiso con la Accesibilidad: Nos apasiona crear experiencias de
-				usuario inclusivas, asegurando que todos los visitantes de las páginas
-				web que desarrollamos puedan navegar de manera intuitiva y sin barreras.
-			</li>
-			<li>
-				Soluciones Integrales: Desde el diseño hasta la implementación y
-				promoción, manejamos todos los aspectos de tu presencia digital para que
-				puedas centrarte en lo que mejorsabes hacer: hacer crecer tu negocio.
-			</li>
-		</ul>
-		<h2>Nuestro Enfoque</h2>
-		<p>
-			En {data.siteInfo.name}, cada proyecto es una oportunidad para innovar y
-			superar expectativas. Utilizamos las últimas tecnologías y las mejores
-			prácticas de la industria para garantizar resultados sobresalientes. Nos
-			involucramos profundamente en cada fase del proceso, asegurándonos de que
-			tu visión se materialice de la manera más efectiva y atractiva posible.
-		</p>
+		<li>
+			Compromiso con la Accesibilidad: Nos apasiona crear experiencias de
+			usuario inclusivas, asegurando que todos los visitantes de las páginas web
+			que desarrollamos puedan navegar de manera intuitiva y sin barreras.
+		</li>
+		<li>
+			Soluciones Integrales: Desde el diseño hasta la implementación y
+			promoción, manejamos todos los aspectos de tu presencia digital para que
+			puedas centrarte en lo que mejorsabes hacer: hacer crecer tu negocio.
+		</li>
+	</ul>
+	<h2>Nuestro Enfoque</h2>
+	<p>
+		En {data.siteInfo.name}, cada proyecto es una oportunidad para innovar y
+		superar expectativas. Utilizamos las últimas tecnologías y las mejores
+		prácticas de la industria para garantizar resultados sobresalientes. Nos
+		involucramos profundamente en cada fase del proceso, asegurándonos de que tu
+		visión se materialice de la manera más efectiva y atractiva posible.
+	</p>
 
-		<h2>Contacto</h2>
-		<p>
-			Si estás buscando un aliado comprometido con tu éxito, no dudes en
-			contactarnos. Estamos aquí para ayudarte a transformar tus ideas en
-			realidad y llevar tu negocio al siguiente nivel.
-		</p>
-	</div>
-</PagesLayout>
+	<h2>Contacto</h2>
+	<p>
+		Si estás buscando un aliado comprometido con tu éxito, no dudes en
+		contactarnos. Estamos aquí para ayudarte a transformar tus ideas en realidad
+		y llevar tu negocio al siguiente nivel.
+	</p>
+</div>

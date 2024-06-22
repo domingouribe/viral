@@ -18,39 +18,45 @@ interface SEOProps {
 	twitterImage?: string;
 }
 
-const {
-	title,
-	description,
-	keywords,
-	author,
-	canonicalUrl,
-	ogType,
-	ogTitle,
-	ogDescription,
-	ogImage,
-	twitterCard,
-	twitterTitle,
-	twitterDescription,
-	twitterImage,
-}: SEOProps = Astro.props;
+const props = Astro.props as SEOProps;
 ---
 
 <head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
-	{keywords && <meta name="keywords" content={keywords.join(", ")} />}
-	{author && <meta name="author" content={author} />}
-	{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-	{ogType && <meta property="og:type" content={ogType} />}
-	{ogTitle && <meta property="og:title" content={ogTitle} />}
-	{ogDescription && <meta property="og:description" content={ogDescription} />}
-	{ogImage && <meta property="og:image" content={ogImage} />}
-	{twitterCard && <meta name="twitter:card" content={twitterCard} />}
-	{twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
+	<title>{props.title}</title>
+	<meta name="description" content={props.description} />
 	{
-		twitterDescription && (
-			<meta name="twitter:description" content={twitterDescription} />
+		props.keywords && (
+			<meta name="keywords" content={props.keywords.join(", ")} />
 		)
 	}
-	{twitterImage && <meta name="twitter:image" content={twitterImage} />}
+	{props.author && <meta name="author" content={props.author} />}
+	{props.canonicalUrl && <link rel="canonical" href={props.canonicalUrl} />}
+	{props.ogType && <meta property="og:type" content={props.ogType} />}
+	{props.ogTitle && <meta property="og:title" content={props.ogTitle} />}
+	{
+		props.ogDescription && (
+			<meta property="og:description" content={props.ogDescription} />
+		)
+	}
+	{props.ogImage && <meta property="og:image" content={props.ogImage} />}
+	{
+		props.twitterCard && (
+			<meta name="twitter:card" content={props.twitterCard} />
+		)
+	}
+	{
+		props.twitterTitle && (
+			<meta name="twitter:title" content={props.twitterTitle} />
+		)
+	}
+	{
+		props.twitterDescription && (
+			<meta name="twitter:description" content={props.twitterDescription} />
+		)
+	}
+	{
+		props.twitterImage && (
+			<meta name="twitter:image" content={props.twitterImage} />
+		)
+	}
 </head>

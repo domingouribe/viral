@@ -13,37 +13,50 @@ const classes = [
 	"Orange",
 	"LightOrange",
 ];
+const seoData = {
+	title: "Planes - Peras con Harina",
+	description:
+		"Elige tu plan según tu negocio. Te asesoraremos para que tomes la mejor decisión",
+	keywords: [
+		"Páginas web económicas",
+		"Páginas web para PYMES",
+		"Páginas Web de alta calidad",
+	],
+	canonicalUrl: "https://www.perasconharina.com/about",
+	ogType: "website",
+	ogTitle: "Planes - Peras con Harina",
+	ogDescription:
+		"Elige tu plan según tu negocio. Te asesoraremos para que tomes la mejor decisión",
+	ogImage: "/src/assets/site-images/about.jpg",
+	twitterCard: "summary_large_image",
+	twitterTitle: "Planes - Peras con Harina",
+	twitterDescription:
+		"Elige tu plan según tu negocio. Te asesoraremos para que tomes la mejor decisión",
+	twitterImage: "/src/assets/site-images/about.jpg",
+};
 ---
 
-<PagesLayout
-	image="/screenshot.png"
-	title="Planes"
-	description="Nuestros planes a tu servicio">
-	<SectionHeading
-		title="Estos son todos nuestros planes"
-		description="Tenemos un Plan adecuado para cada tipo de negocio. Elige el más adecuado o contáctanos para asesorarte"
-	/>
+<PagesLayout seo={seoData} />
 
-	<div class="Container">
-		<CardsContainer>
-			{
-				config.plans.map((plan, index) => (
-					<PlanCard
-						price={plan.price}
-						title={plan.name}
-						description={plan.description}
-						classes={classes[index % classes.length]}
-						tag={plan.tag}
-						features={plan.features}>
-						{/* <a href={`/plans/${plan.slug}`} class="Button Button-sm Orange">
+<div class="Container">
+	<CardsContainer>
+		{
+			config.plans.map((plan, index) => (
+				<PlanCard
+					price={plan.price}
+					title={plan.name}
+					description={plan.description}
+					classes={classes[index % classes.length]}
+					tag={plan.tag}
+					features={plan.features}>
+					{/* <a href={`/plans/${plan.slug}`} class="Button Button-sm Orange">
 							Lo quiero!
 						</a> */}
-						<a href="/contact" class="Button Button-sm Orange">
-							Lo quiero!
-						</a>
-					</PlanCard>
-				))
-			}
-		</CardsContainer>
-	</div>
-</PagesLayout>
+					<a href="/contact" class="Button Button-sm Orange">
+						Lo quiero!
+					</a>
+				</PlanCard>
+			))
+		}
+	</CardsContainer>
+</div>
