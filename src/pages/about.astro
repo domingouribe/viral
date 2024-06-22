@@ -4,35 +4,13 @@ import data from "@/data/config";
 import SectionHeading from "@/components/shared/SectionHeading.astro";
 import Image from "astro/components/Image.astro";
 import ABOUT from "@/assets/site-images/about.webp";
-const seoData = {
-	title: "Nosotros - Peras con Harina",
-	description:
-		"Somos una agencia familiar especializados en marketing digital y desarrollo Web y ofrecemos servicios de alta calidad para tu negocio.",
-	keywords: [
-		"Páginas web económicas",
-		"Páginas web para PYMES",
-		"Páginas Web de alta calidad",
-	],
-	canonicalUrl: "https://www.perasconharina.com/about",
-	ogUrl: "https://www.perasconharina.com/about",
-	ogType: "website",
-	ogTitle: "Nosotros - Peras con Harina",
-	ogDescription:
-		"Somos una agencia familiar especializados en marketing digital y desarrollo Web y ofrecemos servicios de alta calidad para tu negocio.",
-	ogImage: "https://www.perasconharina.com/src/assets/site-images/about.jpg",
-	ogImageAlt: "Imagen de nuestro equipo trabajando en un diseño",
-	ogImageWidth: "1200",
-	ogImageHeight: "630",
-	twitterCard: "summary_large_image",
-	twitterTitle: "Nosotros - Peras con Harina",
-	twitterDescription:
-		"Somos una agencia familiar especializados en marketing digital y desarrollo Web y ofrecemos servicios de alta calidad para tu negocio.",
-	twitterImage:
-		"https://www.perasconharina.com/src/assets/site-images/about.jpg",
-};
 ---
 
-<PagesLayout seo={seoData} />
+<PagesLayout
+	title="Acerca de nosotros"
+	description="Somos una familia dedicada al marketing digital y queremos ayudarte con tu emprendimiento"
+	image="/screenshot.png"
+/>
 
 <div class="Container">
 	<Image
