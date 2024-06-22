@@ -1,0 +1,56 @@
+---
+import "@fontsource-variable/montserrat";
+import "@/styles/global.scss";
+// components/SEO.astro
+interface SEOProps {
+	title: string;
+	description: string;
+	keywords?: string[];
+	author?: string;
+	canonicalUrl?: string;
+	ogType?: string;
+	ogTitle?: string;
+	ogDescription?: string;
+	ogImage?: string;
+	twitterCard?: string;
+	twitterTitle?: string;
+	twitterDescription?: string;
+	twitterImage?: string;
+}
+
+const {
+	title,
+	description,
+	keywords,
+	author,
+	canonicalUrl,
+	ogType,
+	ogTitle,
+	ogDescription,
+	ogImage,
+	twitterCard,
+	twitterTitle,
+	twitterDescription,
+	twitterImage,
+}: SEOProps = Astro.props;
+---
+
+<head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	{keywords && <meta name="keywords" content={keywords.join(", ")} />}
+	{author && <meta name="author" content={author} />}
+	{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+	{ogType && <meta property="og:type" content={ogType} />}
+	{ogTitle && <meta property="og:title" content={ogTitle} />}
+	{ogDescription && <meta property="og:description" content={ogDescription} />}
+	{ogImage && <meta property="og:image" content={ogImage} />}
+	{twitterCard && <meta name="twitter:card" content={twitterCard} />}
+	{twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
+	{
+		twitterDescription && (
+			<meta name="twitter:description" content={twitterDescription} />
+		)
+	}
+	{twitterImage && <meta name="twitter:image" content={twitterImage} />}
+</head>

@@ -18,12 +18,31 @@ const classes = [
 	"Orange",
 	"LightOrange",
 ];
+
+const seoData = {
+	title: "Inicio - Peras con Harina",
+	description:
+		"Bienvenido a Peras con Harina. Creamos páginas Web económicas para PYMES: Conoce y elige el mejor plan para ti.",
+	keywords: [
+		"Páginas web económicas",
+		"Páginas web para PYMES",
+		"Páginas Web de alta calidad",
+	],
+	canonicalUrl: "https://www.perasconharina.com/",
+	ogType: "website",
+	ogTitle: "Inicio - Peras con Harina",
+	ogDescription:
+		"Bienvenido a Peras con Harina. Creamos páginas Web económicas para PYMES: Conoce y elige el mejor plan para ti.",
+	ogImage: "/screenshot.png",
+	twitterCard: "summary_large_image",
+	twitterTitle: "Inicio - Peras con Harina",
+	twitterDescription:
+		"Bienvenido a Peras con Harina. Creamos páginas Web económicas para PYMES: Conoce y elige el mejor plan para ti.",
+	twitterImage: "/screenshot.png",
+};
 ---
 
-<PagesLayout
-	image="/screenshot.png"
-	title="Perasconharina - Páginas Web económicas para PYMES"
-	description="Expertos en diseño y desarrollo Web a tu servicio. Creamos páginas Web para PYMES de manera profesional.">
+<PagesLayout seo={seoData}>
 	<Hero />
 
 	<SectionHeading
