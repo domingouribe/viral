@@ -20,6 +20,7 @@ interface SEOProps {
 	twitterTitle?: string;
 	twitterDescription?: string;
 	twitterImage?: string;
+	fbAppId?: string;
 }
 
 const props = Astro.props as SEOProps;
@@ -59,6 +60,7 @@ const props = Astro.props as SEOProps;
 			<meta property="og:image:height" content={props.ogImageHeight} />
 		)
 	}
+	{props.fbAppId && <meta property="fb:app_id" content={props.fbAppId} />}
 	{
 		props.twitterCard && (
 			<meta name="twitter:card" content={props.twitterCard} />
